@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:id="@+id/constraintRoot"
+        android:layout_height="wrap_content"
+        app:layout_editor_absoluteX="1dp"
+        app:layout_editor_absoluteY="1dp"
+        android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".UserQuestionnaire">
+
+
+        <ImageButton
+                android:id="@+id/backBottom"
+                android:layout_width="50dp"
+                android:src="@drawable/arrow"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerCrop"
+                android:background="@color/white"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent" android:id="@+id/tittle"
+                  app:layout_constraintTop_toBottomOf="@id/backBottom"
+                  android:text="Campañas contra la violencia sexual"
+                  android:layout_marginTop="30dp"
+                  android:textColor="@color/black"
+                  android:textSize="30dp"
+                  android:textStyle="bold"
+                  android:gravity="center"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tittle"
+                  app:layout_constraintEnd_toEndOf="parent" android:id="@+id/description"
+                  android:layout_marginTop="30dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:text="@string/message_questionnaire"
+                  android:gravity="center"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/description"
+                  app:layout_constraintEnd_toEndOf="parent" android:id="@+id/yearsQuest"
+                  android:layout_marginTop="30dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:text="1. ¿Cuál es su edad?"/>
+
+        <RadioGroup
+                android:id="@+id/yearsQuestAsk"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/yearsQuest">
+            <RadioButton
+                    android:id="@+id/yearsQuestSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Juventud (18 - 28 años)"/>
+            <RadioButton
+                    android:id="@+id/yearsQuestTwoSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Adultez (29 - 59 años)"/>
+            <RadioButton
+                    android:id="@+id/yearsQuestThirdSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Persona Mayor (60 años o más)"/>
+        </RadioGroup>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/yearsQuestAsk"
+                  app:layout_constraintEnd_toEndOf="parent" android:id="@+id/firstAsk"
+                  android:layout_marginTop="30dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:text="2. ¿Cuál es su sexo?"/>
+
+        <RadioGroup
+                android:id="@+id/secondAsk"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/firstAsk">
+            <RadioButton
+                    android:id="@+id/firstSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                         android:text="Mujer"/>
+            <RadioButton
+                    android:id="@+id/SecondSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Hombre"/>
+            <RadioButton
+                    android:id="@+id/thirdSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Prefiero no decirlo"/>
+        </RadioGroup>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/secondAsk"
+                  app:layout_constraintEnd_toEndOf="parent" android:id="@+id/thirdTextAsk"
+                  android:layout_marginTop="30dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:text="3. ¿Qué interés le genera la campaña contra la violencia sexual?"/>
+        <RadioGroup
+                android:id="@+id/thirdAsk"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/thirdTextAsk">
+            <RadioButton
+                    android:id="@+id/firstThirdSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Totalmente interesado"/>
+            <RadioButton
+                    android:id="@+id/SecondThirdSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Interesado"/>
+            <RadioButton
+                    android:id="@+id/thirdThirdSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text=" Ni interesado ni desinteresado"/>
+            <RadioButton
+                    android:id="@+id/FourThirdSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Desinteresado"/>
+            <RadioButton
+                    android:id="@+id/FivedThirdSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Totalmente desinteresado"/>
+        </RadioGroup>
+
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/thirdAsk"
+                  app:layout_constraintEnd_toEndOf="parent" android:id="@+id/fourthTextAsk"
+                  android:layout_marginTop="30dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:text="4. ¿Como considera el desempeño del equipo de trabajo acerca de la información suministrada?"/>
+        <RadioGroup
+                android:id="@+id/fourthAsk"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fourthTextAsk">
+            <RadioButton
+                    android:id="@+id/firstFourthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Excelente"/>
+            <RadioButton
+                    android:id="@+id/SecondFourthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Buena"/>
+            <RadioButton
+                    android:id="@+id/thirdFourthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Ni buena ni mala"/>
+            <RadioButton
+                    android:id="@+id/FourFourthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Mala"/>
+            <RadioButton
+                    android:id="@+id/FivedFourthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Pesima"/>
+        </RadioGroup>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/fourthAsk"
+                  app:layout_constraintEnd_toEndOf="parent" android:id="@+id/fifthTextAsk"
+                  android:layout_marginTop="30dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:text="5. ¿Conoce los puntos de atención para casos de violencia sexual?"/>
+        <RadioGroup
+                android:id="@+id/fifthAsk"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fifthTextAsk">
+            <RadioButton
+                    android:id="@+id/firstFifthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Si"/>
+            <RadioButton
+                    android:id="@+id/SecondFifthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="No"/>
+        </RadioGroup>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/fifthAsk"
+                  app:layout_constraintEnd_toEndOf="parent" android:id="@+id/sixthTextAsk"
+                  android:layout_marginTop="30dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:text="6. ¿Qué tanta claridad tiene para reconocer un caso de violencia sexual?"/>
+        <RadioGroup
+                android:id="@+id/sixthAsk"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sixthTextAsk">
+            <RadioButton
+                    android:id="@+id/firstSixthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Alta"/>
+            <RadioButton
+                    android:id="@+id/SecondSixthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Media alta"/>
+            <RadioButton
+                    android:id="@+id/thirdSixthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Media"/>
+            <RadioButton
+                    android:id="@+id/FourSixthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Baja"/>
+            <RadioButton
+                    android:id="@+id/FifthSixthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Ninguna"/>
+        </RadioGroup>
+
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/sixthAsk"
+                  app:layout_constraintEnd_toEndOf="parent" android:id="@+id/seventhTextAsk"
+                  android:layout_marginTop="30dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:text="7. ¿Como considera el desempeño de la entidad en la intervención de casos de violencia sexual?"/>
+        <RadioGroup
+                android:id="@+id/seventhAsk"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seventhTextAsk">
+            <RadioButton
+                    android:id="@+id/firstSeventhSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Excelente"/>
+            <RadioButton
+                    android:id="@+id/SecondSeventhSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Buena"/>
+            <RadioButton
+                    android:id="@+id/thirdSeventhSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Ni buena ni mala"/>
+            <RadioButton
+                    android:id="@+id/FourSeventhSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Mala"/>
+            <RadioButton
+                    android:id="@+id/FivedSeventhSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="No he reportado ningun caso aun"/>
+        </RadioGroup>
+
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/seventhAsk"
+                  app:layout_constraintEnd_toEndOf="parent" android:id="@+id/eighthTextAsk"
+                  android:layout_marginTop="30dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:text="8. ¿Con qué frecuencia considera que debería recibir llamadas o correos electrónicos de parte de CAIVAS para el seguimiento de un caso de violencia sexual?"/>
+        <RadioGroup
+                android:id="@+id/eighthAsk"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eighthTextAsk">
+            <RadioButton
+                    android:id="@+id/firstEighthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Todos los dias"/>
+            <RadioButton
+                    android:id="@+id/SecondEighthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Casi todos los dias"/>
+            <RadioButton
+                    android:id="@+id/thirdEighthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Ocasionalmente"/>
+            <RadioButton
+                    android:id="@+id/FourEighthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Casi nunca"/>
+            <RadioButton
+                    android:id="@+id/FivedEighthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Nunca"/>
+        </RadioGroup>
+
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/eighthAsk"
+                  app:layout_constraintEnd_toEndOf="parent" android:id="@+id/ninthTextAsk"
+                  android:layout_marginTop="30dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:text="9. ¿Cómo considera la eficiencia de atención al ciudadano cuando realiza un reporte de algún caso de violencia sexual?"/>
+        <RadioGroup
+                android:id="@+id/ninthAsk"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ninthTextAsk">
+            <RadioButton
+                    android:id="@+id/firstNinthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Excelente"/>
+            <RadioButton
+                    android:id="@+id/SecondNinthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Buena"/>
+            <RadioButton
+                    android:id="@+id/thirdNinthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Ni buena ni mala"/>
+            <RadioButton
+                    android:id="@+id/FourNinthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Mala"/>
+            <RadioButton
+                    android:id="@+id/FiveNinthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="No he reportado ningun caso aun"/>
+        </RadioGroup>
+
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ninthAsk"
+                  app:layout_constraintEnd_toEndOf="parent" android:id="@+id/tenthTextAsk"
+                  android:layout_marginTop="30dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:text="10. ¿Qué tan satisfecho esta con la atención en sitio de casos de violencia sexual de la entidad CAIVAS?"/>
+        <RadioGroup
+                android:id="@+id/tenthAsk"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tenthTextAsk">
+            <RadioButton
+                    android:id="@+id/firstTenthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Excelente"/>
+            <RadioButton
+                    android:id="@+id/SecondTenthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Buena"/>
+            <RadioButton
+                    android:id="@+id/thirdTenthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Ni buena ni mala"/>
+            <RadioButton
+                    android:id="@+id/FourTenthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Mala"/>
+            <RadioButton
+                    android:id="@+id/FiveTenthSolution"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="No he reportado ningun caso aun"/>
+        </RadioGroup>
+
+
+        <Button
+                android:text="Enviar"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sendQuest"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tenthAsk"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

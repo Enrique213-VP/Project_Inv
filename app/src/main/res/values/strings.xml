@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Project_Inv</string>
+    <string name="years">¿Cual es su edad?</string>
+    <string name="required">Obligatorio</string>
+    <string name="message_questionnaire">Si realiza esta encuesta, debe tener en cuenta que esto será de carácter
+        privado, además, la información suministrada se obtendrá de manera anónima, por esta razón, esperamos respuestas
+        consientes y que puedan aportar a un mejor desempeño para la entidad y el despliegue de campañas.
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="message_user">Si realiza esta encuesta, debe tener en cuenta que esto será de carácter privado,
+        además, la información suministrada se obtendrá de manera anónima, por esta razón, esperamos respuestas
+        consientes y que puedan aportar a un mejor desempeño para la entidad y el despliegue de campañas.
+    </string>
+</resources>

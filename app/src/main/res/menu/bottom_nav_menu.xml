@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="Proyecto"
+          android:icon="@drawable/idea"
+          android:id="@+id/project"/>
+    <item android:title="Cuestionario"
+          android:icon="@drawable/ibutton"
+          android:id="@+id/questionnaire"/>
+
+</menu>
